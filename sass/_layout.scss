@@ -1,0 +1,28 @@
+
+body {
+  background-color:orange;
+}
+
+#container {
+
+}
+
+#banner {
+  @include grid-block();
+}
+
+#main {
+  @include grid-block();
+  & > div {
+	border:solid 1px gainsboro;
+  }
+  & > .sidebar {
+	  @include grid-block(3);
+  }
+  & > .content {
+	@include grid-block(6);
+	h1 {
+	  text-align:center;
+	}
+  }
+}
